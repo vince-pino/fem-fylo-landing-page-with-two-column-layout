@@ -38,12 +38,12 @@
       }
     </style>
   </head>
-  <body>
-    <header>
-      <figure>
+  <body class="font-raleway bg-light-grayish-blue">
+    <header class="p-8 mb-20 flex justify-between items-center">
+      <figure class="w-20">
         <img src="images/logo.svg" alt="logo" />
       </figure>
-      <nav>
+      <nav class="flex gap-3">
         <a href=""> Features </a>
         <a href=""> Team </a>
         <a href=""> Sign In </a>
@@ -51,85 +51,136 @@
     </header>
 
     <main>
-      <section>
+      <section class="px-8 mb-20">
+        <figure class="mb-10">
+          <img src="images/illustration-1.svg" alt="illustration 1" />
+        </figure>
         <div>
-          <h1>All your files in one secure location, accessible anywhere.</h1>
-          <p>
+          <header class="text-2xl text-center text-dark-blue font-bold mb-10">All your files in one secure location, accessible anywhere.</header>
+          <p class="text-center text-dark-blue mb-10">
             Fylo stores your most important files in one secure location. Access
             them wherever you need, share and collaborate with friends, family,
             and co-workers.
           </p>
 
-          <div>
-            <input type="email" placeholder="Enter your email..." />
-            <button>Get Started</button>
+          <div class="flex flex-col items-center gap-4">
+            <input class="border border-dark-blue py-3 px-6 w-full rounded-md" type="email" placeholder="Enter your email..." />
+            <button class="bg-bright-blue text-white font-bold py-3 px-6 rounded-md min-w-max max-w-full w-full sm:max-w-max">Get Started</button>
           </div>
         </div>
-        <figure>
-          <img src="images/illustration-1.svg" alt="illustration 1" />
-        </figure>
       </section>
 
-      <section>
-        <figure>
+      <section class="px-8 mb-20">
+        <figure class="mb-20">
           <img src="images/illustration-2.svg" alt="illustration 2" />
         </figure>
         <div>
-          <h2>Stay productive, wherever you are</h2>
-          <p>
+          <header class="text-base mb-8 text-dark-blue font-bold text-center">Stay productive, wherever you are</header>
+          <p class="text-light-gray text-sm mb-6">
             Never let location be an issue when accessing your files. Fylo has
             you covered for all of your file storage needs.
           </p>
-          <p>
+          <p class="text-light-gray text-sm mb-10">
             Securely share files and folders with friends, family and colleagues
             for live collaboration. No email attachments required!
           </p>
-          <a href="#"> See how Fylo works </a>
-          <div>
-            <p>
+          <nav class="flex justify-center border-b-[1px] border-moderate-cyan w-max m-auto mb-10">
+            <a class="text-center text-xs text-moderate-cyan" href="#"> See how Fylo works</a>
+            <img src="images/icon-arrow.svg" alt="arrow icon">
+          </nav>
+          <div class="bg-white p-6 border-lg shadow-lg w-11/12 m-auto rounded-lg">
+            <figure class="mb-2">
+              <img src="images/icon-quotes.svg" alt="quote icon">
+            </figure>
+            <p class="text-xs text-dark-blue mb-3">
               Fylo has improved our team productivity by an order of magnitude.
               Since making the switch our team has become a well-oiled
               collaboration machine.
             </p>
-            <div>
-              <figure>
-                <img
+            <div class="flex gap-4 items-center">
+              <figure class="w-10">
+                <img class="rounded-full object-cover"
                   src="images/avatar-testimonial.jpg"
                   alt="profile picture"
                 />
               </figure>
-              <div>Kyle Burton</div>
-              <div>Founder & CEO, Huddle</div>
+              <div class="text-xs">
+                <p class="text-dark-blue font-bold">Kyle Burton</p>
+                <p class="text-dark-blue text-[8px]">Founder & CEO, Huddle</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section class="bg-desaturated-blue text-white py-20 px-14">
         <div>
-          <h3>Get early access today</h3>
-          <p>
+          <header class="text-base font-bold text-center mb-6">Get early access today</header>
+          <p class="text-center text-sm mb-6">
             It only takes a minute to sign up and our free starter tier is
             extremely generous. If you have any questions, our support team
             would be happy to help you.
           </p>
         </div>
-        <div>
-          <input type="email" placeholder="email@example.com" />
-          <button>Get Started For Free</button>
+        <div class="flex flex-col text-sm gap-2">
+          <input class="p-2 rounded-sm" type="email" placeholder="email@example.com" />
+          <button class="p-2 bg-bright-blue font-bold rounded-sm">Get Started For Free</button>
         </div>
       </section>
 
-      Phone: +1-543-123-4567 example@fylo.com About Us Jobs Press Blog Contact
-      Us Terms Privacy
     </main>
-
-    <footer>
+    
+    <footer class="bg-dark-blue text-white">
+      <div class=" flex flex-col gap-14 px-14 py-16">
+        <figure>
+          <img src="images/logo.svg" alt="logo">
+        </figure>
+        <div class="space-y-5">
+          <div class="flex items-center gap-4">
+            <figure>
+              <img src="images/icon-phone.svg" alt="phone icon">
+            </figure>
+            <p>
+              Phone: +1-543-123-4567
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <figure>
+              <img src="images/icon-email.svg" alt="email icon">
+            </figure>
+            <p>
+              example@fylo.com
+            </p>
+          </div>
+        </div>
+        <div class="space-y-5">
+          <p>
+            About Us
+          </p>
+          <p>
+            Jobs 
+          </p>
+          <p>
+            Press
+          </p>
+        </div>
+        <div class="space-y-5">
+          <p>
+            Blog 
+          </p>
+          <p>
+            Contact Us
+          </p>
+          <p>
+            Terms Privacy
+          </p>
+        </div>
+      </div>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Vince Cedie Pino</a>.
       </p>
     </footer>
   </body>
