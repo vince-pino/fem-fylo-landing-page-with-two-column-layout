@@ -33,6 +33,20 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      input:invalid:not(:placeholder-shown) {
+        border-color: red;
+      }
+
+      input:invalid:not(:placeholder-shown) + p{
+        display: block;
+      }
+
+      .error-message {
+        display: none;
+        font-size: 12px;
+        align-self: flex-start;
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
@@ -77,18 +91,21 @@
             and co-workers.
           </p>
 
-          <div class="flex flex-col items-center gap-4 sm:flex-row">
-            <input
-              class="w-full rounded-sm border border-dark-blue px-6 py-3 text-sm font-medium text-light-grayish-blue"
+          <form class="flex flex-col items-center gap-4 sm:flex-row sm:items-start">
+            <div class="w-full">
+              <input
+              class="w-full rounded-sm border border-dark-blue px-6 py-3 text-sm font-medium focus:outline-none"
               type="email"
-              placeholder="Enter your email..."
+              placeholder="Enter your email..." required
             />
-            <button
-              class="w-full min-w-max max-w-full rounded-sm bg-bright-blue px-6 py-3 font-semibold text-white sm:max-w-max md:max-w-52"
+            <p class="error-message text-red-400">Please check your email</p>
+            </div>
+            <button type="submit"
+              class="w-full min-w-max max-w-full rounded-sm bg-bright-blue px-6 py-3 font-semibold text-white sm:max-w-max md:max-w-52 hover:bg-[hsl(224,93%,70%)]"
             >
               Get Started
             </button>
-          </div>
+          </form>
         </div>
       </section>
 
@@ -117,15 +134,17 @@
             for live collaboration. No email attachments required!
           </p>
           <nav
-            class="m-auto mb-10 flex w-max justify-center border-b-[1px] border-moderate-cyan lg:m-0"
+            class="m-auto mb-10 flex w-max justify-center border-b-[1px] border-moderate-cyan lg:m-0 group hover:border-[hsl(170,100%,43%)]"
           >
             <a
-              class="text-center text-xs font-medium text-moderate-cyan sm:text-sm"
+              class="text-center text-xs font-medium text-moderate-cyan sm:text-sm group-hover:text-[hsl(170,100%,43%)]"
               href="#"
             >
               See how Fylo works</a
             >
-            <img src="images/icon-arrow.svg" alt="arrow icon" />
+            <figure class="flex">
+              <svg class="m-auto text-moderate-cyan group-hover:text-[hsl(170,100%,43%)]" width="16" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><circle id="b" cx="6" cy="6" r="6"/><filter x="-25%" y="-25%" width="150%" height="150%" filterUnits="objectBoundingBox" id="a"><feOffset in="SourceAlpha" result="shadowOffsetOuter1"/><feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"/><feColorMatrix values="0 0 0 0 0.239215686 0 0 0 0 0.62745098 0 0 0 0 0.560784314 0 0 0 0.793506567 0" in="shadowBlurOuter1"/></filter></defs><g fill="none" fill-rule="evenodd"><g transform="translate(2 2)"><use fill="#000" filter="url(#a)" xlink:href="#b"/><use fill="currentColor" xlink:href="#b"/></g><path d="M8.582 6l-.363.35 1.452 1.4H5.333v.5h4.338L8.22 9.65l.363.35 2.074-2z" fill="#FFF"/></g></svg>
+            </figure>
           </nav>
           <div
             class="border-lg m-auto w-11/12 rounded-lg bg-white p-6 font-medium shadow-lg lg:m-0 lg:mt-8 lg:w-3/5"
@@ -172,18 +191,21 @@
             would be happy to help you.
           </p>
         </div>
-        <div class="flex flex-col gap-2 text-sm sm:text-base lg:w-1/2 lg:gap-4">
-          <input
-            class="rounded-sm p-2 sm:p-4 lg:px-6"
+        <form class="flex flex-col gap-2 text-sm sm:text-base lg:w-1/2 lg:gap-4">
+          <div class="w-full">
+            <input
+            class="rounded-sm w-full p-2 sm:p-4 lg:px-6 text-dark-blue border-[1px] focus:outline-none"
             type="email"
             placeholder="email@example.com"
           />
+          <p class="error-message text-light-grayish-blue">Please check your email</p>
+          </div>
           <button
-            class="rounded-sm bg-bright-blue p-2 font-bold sm:p-4 lg:w-max lg:px-10"
+            class="rounded-sm bg-bright-blue p-2 font-bold sm:p-4 lg:w-max lg:px-10 hover:bg-[hsl(224,93%,70%)]"
           >
             Get Started For Free
           </button>
-        </div>
+        </form>
       </section>
     </main>
 
@@ -235,27 +257,27 @@
             </div>
           </div>
           <div class="mb-16 sm:flex md:justify-between md:w-3/6 lg:1/3">
-            <div class="space-y-4 md:mx-auto lg:mx-0">
-              <p>About Us</p>
-              <p>Jobs</p>
-              <p>Press</p>
-              <p>Blog</p>
+            <div class="mb-4 space-y-4 md:mx-auto lg:mx-0">
+              <p class="hover:text-bright-blue">About Us</p>
+              <p class="hover:text-bright-blue">Jobs</p>
+              <p class="hover:text-bright-blue">Press</p>
+              <p class="hover:text-bright-blue">Blog</p>
             </div>
             <div class="space-y-4 sm:mx-auto">
-              <p>Contact Us</p>
-              <p>Terms</p>
-              <p>Privacy</p>
+              <p class="hover:text-bright-blue">Contact Us</p>
+              <p class="hover:text-bright-blue">Terms</p>
+              <p class="hover:text-bright-blue">Privacy</p>
             </div>
           </div>
           <div class="flex justify-center gap-5 md:w-1/5 md:justify-start lg:1/3">
-            <figure class="flex h-8 w-8 rounded-full border border-white">
-              <i class="fa-brands fa-facebook-f m-auto"></i>
+            <figure class="flex h-8 w-8 rounded-full border border-white hover:border-bright-blue group">
+              <i class="fa-brands fa-facebook-f m-auto group-hover:text-bright-blue"></i>
             </figure>
-            <figure class="flex h-8 w-8 rounded-full border border-white">
-              <i class="fa-brands fa-twitter m-auto"></i>
+            <figure class="flex h-8 w-8 rounded-full border border-white hover:border-bright-blue group">
+              <i class="fa-brands fa-twitter m-auto group-hover:text-bright-blue"></i>
             </figure>
-            <figure class="flex h-8 w-8 rounded-full border border-white">
-              <i class="fa-brands fa-instagram m-auto"></i>
+            <figure class="flex h-8 w-8 rounded-full border border-white hover:border-bright-blue group">
+              <i class="fa-brands fa-instagram m-auto group-hover:text-bright-blue"></i>
             </figure>
           </div>
         </div>
